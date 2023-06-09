@@ -1,0 +1,113 @@
+html {
+  font-family: "Helvetica Neue", "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: whitesmoke;
+  word-spacing: 5px;
+  margin: auto;
+  padding: auto;
+  color: #3c2a21;
+}
+
+header {
+  text-align: center;
+}
+
+.navi {
+  overflow: hidden;
+  background-color: #884a39;
+  flex-wrap: wrap;
+  width: 100%;
+  text-align: center;
+}
+
+.navi a {
+  text-align: center;
+  background-color: #884a39;
+  display: inline-block;
+  color: bisque;
+  padding: 15px 17px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.navi a:hover {
+  background-color: rgb(249, 224, 187);
+  color: rgb(186, 134, 66);
+}
+
+.navi a.active {
+  color: bisque;
+}
+
+aside.bunga {
+  float: right;
+}
+
+img.me {
+  border-radius: 100%;
+  padding-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+
+img.kucing {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+
+main.main1 {
+  flex: 2;
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: space-between;
+  justify-items: center;
+}
+
+p.h1 {
+  text-align: left;
+  line-height: 0.8;
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+.P2 {
+  word-spacing: 3px;
+  line-height: 1.5;
+  text-align: justify;
+  margin: 5px;
+}
+
+.P3 {
+  line-height: 0.4;
+}
+
+.P4 {
+  text-align: center;
+}
+
+/* Responsive  */
+@media screen and (min-width: 1px) and (max-width: 770px) {
+  * {
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+  }
+  img {
+    min-width: 20%;
+  }
+  p.h1 {
+    text-align: center;
+    line-height: 0.1;
+    font-weight: bolder;
+    font-size: 30px;
+  }
+  .P3 {
+    line-height: 1;
+  }
+}
