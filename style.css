@@ -4,14 +4,27 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: "Segoe UI", sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: #f0faff;
   color: #102542;
+  line-height: 1.6;
+}
+
+/* Header */
+.header {
+  width: 100%;
 }
 
 .navi {
   display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   justify-content: center;
   align-items: center;
   gap: 2rem;
@@ -24,12 +37,18 @@ body {
   text-decoration: none;
   font-size: 15px;
   font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+.navi a:hover {
+  color: #ffffff;
 }
 
 .nav_image {
   height: 40px;
 }
 
+/* Intro Section */
 .main1 {
   display: flex;
   flex-direction: row;
@@ -62,6 +81,7 @@ body {
   max-width: 400px;
 }
 
+/* Social Links */
 .social-grid {
   display: flex;
   gap: 1rem;
@@ -89,6 +109,7 @@ body {
   transform: scale(1.1);
 }
 
+/* Profile Picture */
 .profile {
   flex: 1 1 250px;
   display: flex;
@@ -118,9 +139,93 @@ body {
   height: auto;
 }
 
+/* Skills */
+.skills-section {
+  padding: 2rem;
+}
+
+.section-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #102542;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.skill-card {
+  background-color: #ddf2ff;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.skill-card img {
+  height: 50px;
+  margin-bottom: 0.5rem;
+}
+
+.skill-card p {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Projects */
+.projects-section {
+  padding: 2rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background-color: #ddf2ff;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.card p {
+  padding: 0.75rem;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #102542;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Waves */
 .container {
   position: relative;
-  height: 100vh;
+  height: 120px;
 }
 
 .wave {
@@ -136,6 +241,8 @@ body {
 @keyframes animate {
   0% {
     background-position-x: 0;
+  }
+  100% {
     background-position-x: -250rem;
   }
 }
@@ -143,14 +250,87 @@ body {
 .wave:nth-child(1) {
   opacity: 0.9;
 }
-
 .wave:nth-child(2) {
   opacity: 0.5;
   animation-delay: 0.2s;
   animation-direction: reverse;
 }
-
 .wave:nth-child(3) {
   opacity: 0.7;
   animation-delay: 5s;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .card-grid,
+  .skill-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+  .skill-card img {
+    height: 40px;
+  }
+}
+
+/* ========================
+   Responsive Design
+======================== */
+@media (max-width: 768px) {
+  .main1 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .intro {
+    max-width: 90%;
+  }
+
+  .name {
+    font-size: 1.8rem;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .description {
+    max-width: 100%;
+  }
+
+  .social-grid {
+    justify-content: center;
+  }
+
+  .profile-pic-wrapper {
+    width: 250px;
+    height: 250px;
+  }
+
+  .cat {
+    width: 100px;
+    bottom: -8px;
+  }
+
+  .skills-section,
+  .projects-section {
+    padding: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.3rem;
+  }
+
+  .navi {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0.8rem;
+  }
+
+  .navi a {
+    font-size: 14px;
+  }
 }
