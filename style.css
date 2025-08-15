@@ -18,17 +18,17 @@ body {
 /* Header */
 .header {
   width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #4a6583;
 }
 
 .navi {
   display: flex;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  background-color: #4a6583;
   padding: 1rem 0;
 }
 
