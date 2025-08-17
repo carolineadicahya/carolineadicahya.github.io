@@ -1,2 +1,1 @@
-# webcarol.github.io
-#dalam tahap pengembangan
+# Portofolio of Caroline, me!
